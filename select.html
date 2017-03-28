@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/select_comp.js"></script>
+    <style>
+        #app{
+            width:300px;
+        }
+        #app input{
+            background:#fff;
+        }
+        #app li{
+            line-height: 24px;
+            cursor:pointer;
+        }
+        #app li:hover{
+            background:#ccc;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+</div>
+<p>it is awesome too</p>
+<script>
+    var select = createSelect({h:'30',placeholder:'name',option:[1,2,3,4,5]});
+    document.getElementById('app').appendChild(select);
+</script>
+
+</body>
+</html>
