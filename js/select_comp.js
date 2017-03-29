@@ -1,7 +1,3 @@
-/**
- * Created by admin on 2017/3/24.
- */
-
 (function(window){
     function Select(){
        var config = {};
@@ -15,7 +11,9 @@
     Select.prototype = {
         init:function(obj){
             for(var k in obj){
-                this.set(k,obj[k]);
+                if(!this.get(k)){
+                    this.set(k,obj[k]);
+                }
             }
             var box = this.createBox();
             var input = this.createEle();
