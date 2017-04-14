@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="radioComp.js"></script>
+    <style>
+        #li-radioComp-BS,#li-radioComp-MS{
+            width:21px;
+            height:21px;
+            position:relative;
+            float: left;
+            display:table-cell;
+            vertical-align: middle;
+            overflow-y:hidden;
+        }
+
+        .name{
+            float: left;
+            height: 21px !important;
+            line-height:21px;
+            font-size: 14px;
+            margin-left:4px;
+            color:#555;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="get">
+    <span>
+        <span id="li-radioComp-BS"></span><span class="name">male</span>
+    </span>
+    <span>
+        <span id="li-radioComp-MS"></span><span class="name">female</span>
+    </span>
+</form>
+
+
+<script>
+    radioComp("li-radioComp-BS",{id:"male",name:"sex",checked:"checked",value:"male"});
+    radioComp("li-radioComp-MS",{id:"female",name:"sex",value:"female"});
+</script>
+</body>
+</html>

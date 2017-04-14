@@ -11,8 +11,10 @@
     Select.prototype = {
         init:function(obj){
             for(var k in obj){
-                if(!this.get(k)){
-                    this.set(k,obj[k]);
+                if(obj.hasOwnProperty(k)){
+                    if(!this.get(k)){
+                        this.set(k,obj[k]);
+                    }
                 }
             }
             var box = this.createBox();
@@ -50,6 +52,7 @@
             select.style.height = height + 'px';
             select.style.outline = 'none';
             select.setAttribute("placeholder",placeholder);
+            select.setAttribute("readonly","readonly");
             selectBox.appendChild(select);
             return selectBox;
 
